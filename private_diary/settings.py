@@ -1,5 +1,7 @@
 from .settings_common import *
 
+# 本番運用環境用にセキュリティキーを生成し環境変数から読み込む
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # デバッグモードを有効にするかどうか(本番運用では必ずFalseにする)
 DEBUG = False
@@ -15,7 +17,7 @@ MEDIA_ROOT = '/usr/share/nginx/html/media'
 AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
 AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = '/home/app_admin/log'
+EMAIL_FILE_PATH = '/home/ec2-user/log'
 
 # ロギング
 LOGGING = {
