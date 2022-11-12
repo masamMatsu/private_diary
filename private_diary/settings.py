@@ -17,7 +17,7 @@ MEDIA_ROOT = '/usr/share/nginx/html/media'
 AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
 AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = '/home/ec2-user/log'
+EMAIL_FILE_PATH = '/home/app_admin/log'
 
 # ロギング
 LOGGING = {
